@@ -1,0 +1,37 @@
+<div class="gb-paging" ms-class="@classes"  ms-visible='@totalPages>1'>
+
+    <a href="javascript:;" class="prev" ms-class='{disabled: @isDisabled("prev",1)}' ms-click='@cbProxy($event,"prev")'
+    >
+        {{@prevText}}
+    </a>
+
+    <a href="javascript:;" class="first"  ms-class='{disabled: @isDisabled("first", 1)}'  ms-visible="@pagesStart > 1" ms-click='@cbProxy($event,"first")'
+    >
+        {{@firstText}}
+    </a>
+
+    <span class="gb-paging-ellipsis" ms-visible="@pagesStart > 2">...</span>
+    
+    
+
+    <a href="javascript:;" ms-for="page in @pages" ms-class="{'gb-paging-current': page === @currentPage}"  ms-click="@cbProxy($event,page)"
+    >
+    {{page}}
+    </a>
+    
+    <span class="gb-paging-ellipsis" ms-visible="@pagesEnd + 1 < @totalPages && @pagesEnd != 1 && @pagesEnd != @totalPages">...</span>
+
+    <a href="javascript:;" class="last"
+        ms-class='{disabled: @isDisabled("last",@totalPages)}' ms-visible="@pagesEnd < @totalPages"
+       ms-click='@cbProxy($event,"last")'
+    >
+        {{@totalPages}}
+    </a>
+
+    <a href="javascript:;" class="next"
+        ms-class='{disabled: @isDisabled("next",@totalPages)}'
+       ms-click='@cbProxy($event,"next")'
+    >
+        {{@nextText}}  
+    </a>
+</div>
