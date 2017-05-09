@@ -1,6 +1,10 @@
 # Avalon 分页组件
 
-基于 [https://github.com/RubyLouvre/ms-pager](https://github.com/RubyLouvre/ms-pager).
+基于 [https://github.com/RubyLouvre/ms-pager](https://github.com/RubyLouvre/ms-pager)
+
+## 演示
+
+![demo](test/images/demo.gif)
 
 ## 使用
 
